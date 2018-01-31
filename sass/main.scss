@@ -1,0 +1,38 @@
+/* Code which doesnt create css */
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+/* base for general code*/
+
+@import "base/animation";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+/* components - reusable part */
+
+@import "components/button";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/card";
+@import "components/story";
+@import "components/bg-video";
+@import "components/form";
+@import "components/popup";
+
+/* similar to components- will
+ be required on every page */
+
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
+@import "layout/navigation";
+
+/* pages */
+@import "pages/home";
+
+// for custom animations
+// must visit cubic-bezier.com
+
