@@ -40,8 +40,7 @@
     /*hower on card directly not on sides*/
     &:hover &__side--back {
         transform: rotateY(0);
-    }
-    // front side styling
+    } // front side styling
     &__picture {
         background-size: cover;
         height: 23rem; // not available in all browsers
@@ -86,16 +85,12 @@
         }
     }
     &__details {
-
         padding: 3rem;
-
         ul {
             // every time use a list
             list-style: none;
-            width: 80%;
-            // for block inside block
+            width: 80%; // for block inside block
             margin: 0 auto;
-
             li {
                 text-align: center;
                 font-size: 1.5rem;
@@ -105,32 +100,25 @@
                 }
             }
         }
-    }
-
-    // back side styling
+    } // back side styling
     &__cta {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
-        // for the content
+        transform: translate(-50%, -50%); // for the content
         width: 90%;
         text-align: center;
-    }
-
-    // price box containing below two elements
+    } // price box containing below two elements
     &__price-box {
         text-align: center;
         margin-bottom: 8rem;
         color: white;
     }
-
     &__price-only {
         font-size: 1.4rem;
         text-transform: uppercase;
     }
-
-    &__price-value{
+    &__price-value {
         font-size: 6rem;
         font-weight: 100;
     }

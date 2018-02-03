@@ -9,6 +9,17 @@
         position: fixed;
         top: 6rem;
         right: 6rem;
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;          
+        }
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;          
+        }
+
         border-radius: 50%;
         z-index: 2000;
 
@@ -19,6 +30,17 @@
         //initial circle
         height: 6rem;
         width: 6rem; // half of width
+
+        @include respond(tablet-port) {
+            top: 4.5rem;
+            right: 4.5rem;          
+        }
+
+        @include respond(phone) {
+            top: 3.5rem;
+            right: 3.5rem;          
+        }
+
         border-radius: 50%;
         background-color: $color-primary;
         position: fixed;

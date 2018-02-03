@@ -6,14 +6,13 @@ body {
     /* font-size: 16px; */
     line-height: 1.7;
     color: $color-grey-dark;
-    padding: 3rem;
 }
 
 .heading-primary {
     color: $color-white;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 6rem;
+    margin-bottom: 6rem; // decrease height 
     &--main {
         display: block;
         font-size: 60px;
@@ -21,7 +20,11 @@ body {
         letter-spacing: 3.5rem;
         animation-name: moveInLeft;
         animation-duration: 1s;
-        animation-timing-function: ease-out;
+        animation-timing-function: ease-out; // decrease font size for phone
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
     &--sub {
         display: block;
@@ -30,7 +33,10 @@ body {
         letter-spacing: 1.7rem;
         animation-name: moveInRight;
         animation-duration: 1s;
-        animation-timing-function: ease-out;
+        animation-timing-function: ease-out; // decrease font size for phone
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -44,6 +50,16 @@ body {
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
+
+    // reduce font size for phone and tablet
+    @include respond(tab-port) {
+        font-size: 2.5rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2rem;
+    }
+
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
@@ -54,11 +70,4 @@ body {
     font-size: $default-font-size;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-.paragraph {
-    font-size: $default-font-size;
-    &:not(:last-child) {
-        margin-bottom: 3rem;
-    }
 }
